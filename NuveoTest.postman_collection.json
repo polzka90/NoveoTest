@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "dac10ea4-fa5d-4d98-b7cc-051de0933648",
+		"name": "NuveoTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ListAllWorkFlow",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:55126/workflow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55126",
+					"path": [
+						"workflow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InsertWorkFlow",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"UUID\":\"B3CF98C5-A4A6-4609-88B1-2572EA070F3B\",\n\t\"Data\":\"{\\\"Data1\\\":\\\"whatever1\\\",\\\"Data2\\\":\\\"whatever2\\\"}\",\n\t\"Steps\":[\"step1\",\"step2\",\"step3\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:55126/workflow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55126",
+					"path": [
+						"workflow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCSV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:55126/workflow/consume",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55126",
+					"path": [
+						"workflow",
+						"consume"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateWrokflowStatus",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:55126/workflow/B3CF98C5-A4A6-4609-88B1-2572EA070F3B",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "55126",
+					"path": [
+						"workflow",
+						"B3CF98C5-A4A6-4609-88B1-2572EA070F3B"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
